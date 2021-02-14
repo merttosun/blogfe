@@ -1,6 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { PostsProvider } from "./contexts/PostsContext";
+import Posts from "./components/Posts/Posts";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <PostsProvider>
+        <Posts />
+      </PostsProvider>
     </div>
   );
 }
