@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import "./PostCard.css";
+import "./Posts.css";
 import { getPosts } from "../../services/posts";
 import { usePostsStateValue } from "../../contexts/PostsContext";
 import PostCard from "../PostCard/PostCard";
@@ -18,7 +18,7 @@ const Posts = () => {
     fetchPosts();
   }, []);
   return (
-    <div>
+    <div className="posts-container">
       {posts.map((post: any) => (
         <PostCard post={post} />
       ))}

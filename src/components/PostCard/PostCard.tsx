@@ -1,7 +1,11 @@
 import React, { FC } from "react";
 import "./PostCard.css";
 
-const PostCard: FC<any> = ({ post }): JSX.Element | null => {
+type PostCardItemProps = {
+  post: { img: string; paragraph: string; title: string };
+};
+
+const PostCard: FC<PostCardItemProps> = ({ post }): JSX.Element => {
   return (
     <div className="post-card">
       <div className="img-wrapper">
