@@ -1,15 +1,16 @@
 import React, { FC } from "react";
-// import "./PostCard.css";
-import logo from "../../logo.svg";
+import "./PostCard.css";
 
 const PostCard: FC<any> = ({ post }): JSX.Element | null => {
   return (
-    <div>
-      <h1>{post.title}</h1>
-      {post.content.map((c: any) => {
-        const CustomTag = c.tag as keyof JSX.IntrinsicElements;
-        return <CustomTag>{c.data}</CustomTag>;
-      })}
+    <div className="post-card">
+      <div className="img-wrapper">
+        <img src={post.img} alt="post" />
+      </div>
+      <div className="post-summary">
+        <h2 className="title">{post.title}</h2>
+        <p>{post.paragraph}</p>
+      </div>
     </div>
   );
 };
