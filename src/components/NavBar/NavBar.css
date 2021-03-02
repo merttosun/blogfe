@@ -1,0 +1,25 @@
+.navbar{
+    width:100%;
+    background: #d6d6d6;
+
+}
+
+.navbar, .navbar-list{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-list {
+    list-style-type: none;
+    width:400px;
+    justify-content: space-around;
+}
+.navbar-item{
+    text-decoration: none;
+    cursor:pointer;
+}
+.navbar-item:hover {
+    border-bottom:1px solid white;
+    transition:all 0.3s linear;
+}

@@ -9,7 +9,7 @@ const PostCard: FC<PostCardItemProps> = ({ post }): JSX.Element => {
   return (
     <div className="post-card">
       <div className="img-wrapper">
-        <img src={post.img} alt="post" />
+        <img src={post.img} alt="post" loading="lazy"/>
       </div>
       <div className="post-summary">
         <h2 className="title">{post.title}</h2>

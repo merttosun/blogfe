@@ -1,17 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
+import NavBar from './components/NavBar/NavBar'
 import "./App.css";
-import { PostsProvider } from "./contexts/PostsContext";
+import {PostsProvider} from "./contexts/PostsContext";
 import Posts from "./components/Posts/Posts";
 
 function App() {
-  return (
-    <div className="App">
-      <PostsProvider>
-        <Posts />
-      </PostsProvider>
-    </div>
-  );
+    return (
+        <div className="App">
+            <NavBar/>
+            <PostsProvider>
+                <Posts/>
+            </PostsProvider>
+        </div>
+    );
 }
 
 export default App;
