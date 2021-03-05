@@ -1,18 +1,13 @@
 .post-card {
     width: fit-content;
-    border: 1px solid #d6d6d6;
-    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
     margin: 20px;
     display: flex;
     cursor: pointer;
     max-height: 200px;
     box-sizing: border-box;
-}
-
-
-
-.post-card:nth-child(even) {
-    flex-direction: row-reverse;
+    background: #FBFBFB;
 }
 
 .post-card .img-wrapper {
@@ -57,7 +52,4 @@
         flex-direction: column;
     }
 
-    .post-card:nth-child(even) {
-        flex-direction: column-reverse;
-    }
 }
