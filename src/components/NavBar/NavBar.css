@@ -17,21 +17,23 @@
     color: #83818c;
     padding: 20px;
     text-decoration: none;
+    list-style-type: none;
     transition: 0.6s;
     margin: 0 7px;
     z-index: 1;
     font-family: tahoma;
     font-weight: 500;
     position: relative;
+    cursor:pointer;
 }
 
 .active {
-    color: #61dafb;
+    color: rgb(38 166 153);
 }
 
 .long-stick {
     height: 2px;
-    background: #61dafb;
+    background:rgb(38 166 153);
     width: 100%;
 }
 

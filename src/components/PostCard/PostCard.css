@@ -28,6 +28,7 @@
     padding: 15px;
     background: #FBFBFB;
     box-sizing: border-box;
+    position: relative;
 }
 
 .post-summary h2,
@@ -45,6 +46,35 @@
 
 .post-summary p {
     font-size: 14px;
+    flex-grow: 1;
+}
+
+.post-summary .tech-badge-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.post-summary .tech-badge {
+    font-size: 12px;
+    color: white;
+    background: aquamarine;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 4px;
+}
+
+.post-summary .date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #83818c;
+    border-top-left-radius: 10px;
+    padding: 4px;
+    color: white;
+    font-size: 11px;
+    font-style: italic;
+    text-align: right;
 }
 
 @media only screen and (max-width: 600px) {
