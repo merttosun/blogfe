@@ -4,7 +4,6 @@ import "./App.css";
 import { PostsProvider } from "./contexts/PostsContext";
 import Posts from "./components/Posts/Posts";
 import PostDetail from "./components/PostDetail/PostDetail";
-import Highlighter from "./components/Highlighter/Highlighter";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {

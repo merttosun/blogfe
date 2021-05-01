@@ -1,0 +1,11 @@
+.pdp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-detail {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+}

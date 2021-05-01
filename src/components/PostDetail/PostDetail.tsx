@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getPostDetail } from "../../services/posts";
 import Highlighter from "../Highlighter/Highlighter";
+import "./PostDetail.css";
 
 type postDetailType = {
   id: string;
@@ -39,26 +40,27 @@ const PostDetail: FC = (): JSX.Element => {
   useEffect(() => {
     const fetchDetail = async () => {
       const result = await getPostDetail(id);
-      debugger;
       setPostDetail(result.data);
     };
     fetchDetail();
   }, []);
 
   return (
-    <div>
-      <div>{id}</div>
-      <div>{postDetail?.title}</div>
-      <div>{postDetail?.paragraph}</div>
-      {postDetail?.contents.map((content) => {
-        const CustomTag = content.tag as keyof JSX.IntrinsicAttributes;
-        return content.tag === "code" ? (
+    <div className="pdp-container">
+      <div className="post-detail">
+        <div>{id}</div>
+        <h1 className="title">{postDetail?.title}</h1>
+        <p>{postDetail?.paragraph}</p>
+        {postDetail?.contents.map((content) => {
+          const CustomTag = content.tag as keyof JSX.IntrinsicAttributes;
+          return content.tag === "code" ? (
             <Highlighter codeString={codeString} />
-            ) : (
-        // @ts-ignore
-          <CustomTag>{content.data}</CustomTag>
-        );
-      })}
+          ) : (
+            // @ts-ignore
+            <CustomTag>{content.data}</CustomTag>
+          );
+        })}
+      </div>
     </div>
   );
 };
